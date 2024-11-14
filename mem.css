@@ -1,0 +1,109 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Product Grid Section Styling */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card h3 {
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: center;
+    color: #333;
+}
+
+.read-more-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #5b92e5; /* Blue color to match header/nav */
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px; /* Rounded corners like the navigation links */
+    width: 80%;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effects */
+.product-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img:hover {
+    transform: scale(1.1);
+}
+
+.read-more-btn:hover {
+    background-color: #0b2ef1; /* Darker blue for hover effect */
+}
+
+/* Apply Now Button Styles */
+.Apply-now {
+    padding: 10px 20px;
+    background: #e76610;
+    border: none;
+    color: #fff;
+    font-size: 16px; /* Increased font size */
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 25px;
+    display: block;
+    width: 150px; /* Fixed width for button */
+    margin: auto; /* Center the button */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns for tablets and smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+    }
+
+    .product-card {
+        margin-bottom: 20px;
+    }
+
+    .read-more-btn {
+        width: 90%; /* Button takes more width on smaller screens */
+    }
+
+    .Apply-now {
+        width: 80%; /* Make the Apply Now button take more width on smaller screens */
+        font-size: 14px; /* Adjust font size */
+    }
+}

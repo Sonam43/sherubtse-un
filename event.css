@@ -1,0 +1,107 @@
+/* General Container Styling */
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Card Styling */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Section */
+.image-section {
+    flex: 0 0 300px; /* Fixed width for image section */
+    height: 250px; /* Fixed height for image section */
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .image-section img {
+    transform: scale(1.05);
+}
+
+/* Card Content */
+.card-content {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Title and Description */
+.details-section h3 {
+    font-size: 1.4em;
+    color: #004080;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.details-section p {
+    font-size: 1em;
+    color: #555;
+    text-align: center;
+}
+
+/* Button */
+.read-more-btn {
+    margin: 20px auto; /* Automatically center the button horizontally */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block; /* Make the button a block element to center it */
+    width: 20%; /* Set the width to control button size */
+    text-align: center;   
+}
+
+.read-more-btn a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    text-align: center;
+    position: center;
+}
+
+.read-more-btn:hover {
+    background-color: #0059b3;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .image-section {
+        flex: 0 0 200px;
+        width: 100%;
+    }
+}
